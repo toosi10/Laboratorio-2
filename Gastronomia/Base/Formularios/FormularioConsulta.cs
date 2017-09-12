@@ -30,6 +30,11 @@ namespace Gastronomia.Base.Formularios
             this.imgBuscar.Image = ImagenBoton.BotonBuscar;
         }
 
+        public virtual void ActualizarDatos(string cadenaBuscar)
+        {
+
+        }
+
         private void AgregarColorcontroles()
         {
             txtBuscar.Enter += ColorControl_Enter;
@@ -116,6 +121,19 @@ namespace Gastronomia.Base.Formularios
             return true;
         }
 
-        
+        private void FormularioConsulta_Load(object sender, EventArgs e)
+        {
+            ActualizarDatos(string.Empty);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarDatos(this.txtBuscar.Text);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ActualizarDatos(this.txtBuscar.Text);
+        }
     }
 }

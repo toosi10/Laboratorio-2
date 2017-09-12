@@ -32,11 +32,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscar)).BeginInit();
             this.SuspendLayout();
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Size = new System.Drawing.Size(1078, 55);
+            // 
+            // pnlBuscar
+            // 
+            this.pnlBuscar.Size = new System.Drawing.Size(1078, 103);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(966, 14);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Size = new System.Drawing.Size(878, 26);
+            // 
             // _00001_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 644);
+            this.ClientSize = new System.Drawing.Size(1078, 644);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "_00001_Empleados";
             this.Text = "Empleados";

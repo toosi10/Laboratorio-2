@@ -86,6 +86,7 @@
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -188,6 +189,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(92, 74);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnImpimir
             // 
@@ -223,6 +225,7 @@
             this.Controls.Add(this.menu);
             this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "FormularioConsulta";
+            this.Load += new System.EventHandler(this.FormularioConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();

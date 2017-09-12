@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +54,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos\Empleado.cs">
+      <DependentUpon>Gastronomia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\Gastronomia.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gastronomia.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\Gastronomia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gastronomia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\Gastronomia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gastronomia.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\Persona.cs">
+      <DependentUpon>Gastronomia.tt</DependentUpon>
+    </Compile>
     <Compile Include="Base\Formularios\FormularioAbm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +120,7 @@
     <Compile Include="Core\_00004_ABM_Perfil.Designer.cs">
       <DependentUpon>_00004_ABM_Perfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogicaNegocio\Empleado\EmpleadoServicio.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +160,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="AccesoDatos\Gastronomia.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Gastronomia.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AccesoDatos\Gastronomia.edmx.diagram">
+      <DependentUpon>Gastronomia.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -142,8 +181,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccesoDatos\Gastronomia.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Gastronomia.Context.cs</LastGenOutput>
+      <DependentUpon>Gastronomia.edmx</DependentUpon>
+    </Content>
+    <Content Include="AccesoDatos\Gastronomia.edmx.sql" />
+    <Content Include="AccesoDatos\Gastronomia.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Gastronomia.cs</LastGenOutput>
+      <DependentUpon>Gastronomia.edmx</DependentUpon>
+    </Content>
     <Content Include="Contenido\Imagenes\actualizar.png" />
     <Content Include="Contenido\Imagenes\buscar.png" />
     <Content Include="Contenido\Imagenes\eliminar.png" />
@@ -153,6 +205,9 @@
     <Content Include="Contenido\Imagenes\nuevo.png" />
     <Content Include="Contenido\Imagenes\rehacer.png" />
     <Content Include="Contenido\Imagenes\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LogicaNegocio\Empleado\DTOs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
