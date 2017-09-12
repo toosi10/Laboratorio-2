@@ -2,7 +2,7 @@
 
 namespace Gastronomia.Base.Helpers
 {
-    public static class ImagenBoton
+    public static class ImagenBoton // Clase que ayuda a darles las imagenes a los botones
     {
         public static Image BotonNuevo = Properties.Resources.nuevo;
         public static Image BotonEliminar = Properties.Resources.eliminar;
