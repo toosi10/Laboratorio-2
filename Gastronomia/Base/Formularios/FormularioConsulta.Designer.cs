@@ -139,7 +139,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblTitulo.Location = new System.Drawing.Point(0, 82);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(978, 41);
+            this.lblTitulo.Size = new System.Drawing.Size(978, 55);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Titulo";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,12 +201,12 @@
             this.dgvGrilla.BackgroundColor = System.Drawing.Color.White;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrilla.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGrilla.Location = new System.Drawing.Point(0, 123);
+            this.dgvGrilla.Location = new System.Drawing.Point(0, 137);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.ReadOnly = true;
             this.dgvGrilla.RowTemplate.Height = 28;
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGrilla.Size = new System.Drawing.Size(978, 418);
+            this.dgvGrilla.Size = new System.Drawing.Size(978, 404);
             this.dgvGrilla.TabIndex = 3;
             // 
             // FormularioConsulta

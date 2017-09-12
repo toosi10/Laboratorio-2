@@ -12,6 +12,11 @@ namespace Gastronomia.Base.Formularios
             AgregarImagenBotones();
         }
 
+        public FormularioConsulta(string titulo) : this()
+        {
+            lblTitulo.Text = titulo;
+        }
+
         private void AgregarImagenBotones()
         {
             this.btnNuevo.Image = ImagenBoton.BotonNuevo;
