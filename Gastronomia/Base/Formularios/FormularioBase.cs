@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Gastronomia.Base.Helpers;
+using System;
 using System.Windows.Forms;
 
 namespace Gastronomia.Base.Formularios
@@ -15,6 +9,18 @@ namespace Gastronomia.Base.Formularios
         public FormularioBase()
         {
             InitializeComponent();
+        }
+
+        public virtual void ColorControl_Enter(object sender, EventArgs e)
+        {
+            if(sender is TextBox)
+                ((TextBox)sender).BackColor = ColorControles.RecibeFoco;
+        }
+
+        public virtual void ColorControl_Leave(object sender, EventArgs e)
+        {
+            if (sender is TextBox)
+                ((TextBox)sender).BackColor = ColorControles.PierdeFoco;
         }
     }
 }

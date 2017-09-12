@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Formularios\FormularioAbm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Formularios\FormularioAbm.Designer.cs">
+      <DependentUpon>FormularioAbm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Base\Formularios\FormularioBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,12 +63,32 @@
     <Compile Include="Base\Formularios\FormularioConsulta.Designer.cs">
       <DependentUpon>FormularioConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base\Helpers\ColorControles.cs" />
     <Compile Include="Base\Helpers\ImagenBoton.cs" />
+    <Compile Include="Base\Helpers\TipoOperacion.cs" />
     <Compile Include="Core\_00001_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Core\_00001_Empleados.Designer.cs">
       <DependentUpon>_00001_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\_00002_ABM_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\_00002_ABM_Empleado.Designer.cs">
+      <DependentUpon>_00002_ABM_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\_00003_Perfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\_00003_Perfiles.Designer.cs">
+      <DependentUpon>_00003_Perfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\_00004_ABM_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\_00004_ABM_Perfil.Designer.cs">
+      <DependentUpon>_00004_ABM_Perfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -72,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Base\Formularios\FormularioAbm.resx">
+      <DependentUpon>FormularioAbm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Base\Formularios\FormularioBase.resx">
       <DependentUpon>FormularioBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Core\_00001_Empleados.resx">
       <DependentUpon>_00001_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\_00002_ABM_Empleado.resx">
+      <DependentUpon>_00002_ABM_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\_00003_Perfiles.resx">
+      <DependentUpon>_00003_Perfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -112,9 +147,11 @@
     <Content Include="Contenido\Imagenes\actualizar.png" />
     <Content Include="Contenido\Imagenes\buscar.png" />
     <Content Include="Contenido\Imagenes\eliminar.png" />
+    <Content Include="Contenido\Imagenes\guardar.png" />
     <Content Include="Contenido\Imagenes\imprimir.png" />
     <Content Include="Contenido\Imagenes\modificar.png" />
     <Content Include="Contenido\Imagenes\nuevo.png" />
+    <Content Include="Contenido\Imagenes\rehacer.png" />
     <Content Include="Contenido\Imagenes\salir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,6 @@
 ﻿using Gastronomia.Base.Helpers;
 using System;
+using System.Windows.Forms;
 
 namespace Gastronomia.Base.Formularios
 {
@@ -10,6 +11,7 @@ namespace Gastronomia.Base.Formularios
             InitializeComponent();
 
             AgregarImagenBotones();
+            AgregarColorcontroles();
         }
 
         public FormularioConsulta(string titulo) : this()
@@ -28,10 +30,92 @@ namespace Gastronomia.Base.Formularios
             this.imgBuscar.Image = ImagenBoton.BotonBuscar;
         }
 
+        private void AgregarColorcontroles()
+        {
+            txtBuscar.Enter += ColorControl_Enter;
+            txtBuscar.Leave += ColorControl_Leave;
+        }
+
         // Se hace public virtual para poder ser sobre-escrito
         public virtual void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        // ===========================================================================================================
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            EjecutarFormularioInsert();
+        }
+
+        public virtual void EjecutarFormularioInsert()
+        {
+            
+        }
+
+        // ===========================================================================================================
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (VerificarSiExistenDatos())
+            {
+                if (VerificarSiSeleccionoUnRegistro())
+                {
+                    EjecutarFormularioDelete();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor seleccione el registro a eliminar");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para eliminar");
+            }
+        }
+
+        public virtual void EjecutarFormularioDelete()
+        {
+        }
+
+        // ===========================================================================================================
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (VerificarSiExistenDatos())
+            {
+                if (VerificarSiSeleccionoUnRegistro())
+                {
+                    EjecutarFormularioUpdate();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor seleccione el registro a modificar");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+        }
+
+        public virtual void EjecutarFormularioUpdate()
+        {
+        }
+
+        // ===========================================================================================================
+
+        private bool VerificarSiSeleccionoUnRegistro()
+        {
+            return true;
+        }
+
+        private bool VerificarSiExistenDatos()
+        {
+            return true;
+        }
+
+        
     }
 }

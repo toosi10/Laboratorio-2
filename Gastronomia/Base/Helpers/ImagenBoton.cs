@@ -11,5 +11,7 @@ namespace Gastronomia.Base.Helpers
         public static Image BotonImprimir = Properties.Resources.imprimir;
         public static Image BotonSalir = Properties.Resources.salir;
         public static Image BotonBuscar = Properties.Resources.buscar;
+        public static Image BotonEjecutar = Properties.Resources.guardar;
+        public static Image BotonLimpiar = Properties.Resources.rehacer;
     }
 }
